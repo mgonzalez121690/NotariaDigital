@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">NotariaDigital</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="cotiza_prestamo">Cotiza préstamo</string>
+    <string name="captura_datos">Captura Datos</string>
+    <string name="monto_prestamo">Monto de préstamo</string>
+    <string name="btn_realizar_cotizacion">Cotizar</string>
+    <string name="btn_limpiar">Limpiar Campos</string>
+    <string name="tasa_interes">Tasa de interés</string>
+    <string name="plazo_prestamo">Plazo</string>
+    <string name="periodicidad_pago">Periodicidad</string>
+    <string name="lbl_email">E-mail</string>
+    <string name="lbl_pasword">Password</string>
+    <string name="lbl_login">Login</string>
+    <string name="lbl_registro">¿No tienes cuenta aún? Registrate</string>
+    <string name="lbl_editar">Editar</string>
+    <string name="lbl_eliminar">Eliminar</string>
+    <string name="lbl_guardar">Guardar</string>
+</resources>
