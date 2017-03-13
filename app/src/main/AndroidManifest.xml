@@ -27,7 +27,8 @@
         <activity android:name=".controller.LogginActivity" />
         <activity android:name=".controller.MenuPrincipalActivity" />
         <activity android:name=".controller.CotizaPrestamoActivity" />
-        <activity android:name=".controller.MostrarCotizacionActivity"></activity>
+        <activity android:name=".controller.MostrarCotizacionActivity" />
+        <activity android:name=".controller.RegistroActivity"></activity>
     </application>
 
 </manifest>

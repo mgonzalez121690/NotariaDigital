@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="fill_parent"
-    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:stretchColumns="2"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.maveware.notariadigital.controller.MenuPrincipalActivity">
 
-    <TableRow
-        android:id="@+id/tableRow1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp">
+    <TableRow>
+
+        <Button
+            android:id="@+id/btn_mostrar_prestamos"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="@string/lbl_mostrar_prestamos"/>
+
+    </TableRow>
+    <TableRow>
 
         <Button
             android:id="@+id/btn_mostrar_cotizador"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/cotiza_prestamo">
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:text="@string/cotiza_prestamo"/>
 
-        </Button>
+
+
+        <Button
+            android:id="@+id/btn_opciones"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:text="Opciones"/>
     </TableRow>
+
 
 </TableLayout>

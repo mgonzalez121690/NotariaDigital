@@ -29,4 +29,5 @@
     <string name="lbl_editar">Editar</string>
     <string name="lbl_eliminar">Eliminar</string>
     <string name="lbl_guardar">Guardar</string>
+    <string name="lbl_mostrar_prestamos">Mostrar prestamos</string>
 </resources>

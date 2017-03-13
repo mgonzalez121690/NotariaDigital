@@ -44,6 +44,16 @@ public class LogginActivity extends AppCompatActivity {
                 login(email, password);
             }
         });
+
+        linkSignUp.setOnClickListener(new  View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(LogginActivity.this, RegistroActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
     }
 
     public void login(String email, String password){
