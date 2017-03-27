@@ -12,6 +12,7 @@ public interface Constants {
     public static final String PASSWORD_ERROR_INVALIDO = "El password debe tener entre 4 y 10 carácteres.";
     public static final String LOGIN_AUTENTICANDO = "Autenticando...";
     public static final String LISTA_PAGOS="LISTA_PAGOS";
+    public static final String REGISTRO_ERROR_CREAR_USUARIO="Ha ocurrido un error al registrarse. Intente más tarde.";
 
     /*Plazos constant*/
     public static final String [] PLAZOS = {"SEMANAS","QUINCENAS","MESES"};

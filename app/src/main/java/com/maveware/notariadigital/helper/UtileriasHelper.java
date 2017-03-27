@@ -1,5 +1,9 @@
 package com.maveware.notariadigital.helper;
 
+import android.util.Patterns;
+
+import com.maveware.notariadigital.constants.Constants;
+
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Locale;
@@ -16,5 +20,7 @@ public class UtileriasHelper {
 
         return nf.format(valor);
     }
+
+
 
 }
