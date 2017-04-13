@@ -3,6 +3,7 @@ package com.maveware.notariadigital.controller;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +14,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.maveware.notariadigital.R;
 import com.maveware.notariadigital.constants.Constants;
 
@@ -29,13 +34,15 @@ public class LogginActivity extends AppCompatActivity {
     Button btn_loggin;
     @InjectView(R.id.link_signup)
     TextView linkSignUp;
+    private FirebaseAuth firebaseAuth;
+    private ProgressDialog progressDialog = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loggin_layout);
         ButterKnife.inject(this);
-
+        firebaseAuth = FirebaseAuth.getInstance();
         btn_loggin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -66,29 +73,44 @@ public class LogginActivity extends AppCompatActivity {
 
         btn_loggin.setEnabled(true);
 
-        final ProgressDialog progressDialog = new ProgressDialog(LogginActivity.this,
-                R.style.AppTheme);
+       // progressDialog = new ProgressDialog(LogginActivity.this, R.style.AppTheme);
+        progressDialog = new ProgressDialog(LogginActivity.this);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage(Constants.LOGIN_AUTENTICANDO);
         progressDialog.show();
 
         /*
-        * TODO validate authentication
+        * validate authentication on firebase
         * */
-
-        new android.os.Handler().postDelayed(
+        authenticationFirebase(email, password);
+        /*new android.os.Handler().postDelayed(
                 new Runnable() {
                     @Override
                     public void run() {
                         onLoginSuccess();
                         progressDialog.dismiss();
                     }
-                }, 3000);
+                }, 3000);*/
     }
 
     @Override
     protected  void onActivityResult(int requestCode, int resultCode, Intent data){
 
+    }
+
+
+    private void  authenticationFirebase(String email, String password){
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressDialog.dismiss();
+                        if(task.isSuccessful())
+                            onLoginSuccess();
+                        else
+                            onLoginFailed();
+                    }
+                });
     }
 
     public void onLoginSuccess(){

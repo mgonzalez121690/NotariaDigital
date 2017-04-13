@@ -2,32 +2,33 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:stretchColumns="2"
+    android:stretchColumns="*"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.maveware.notariadigital.controller.MenuPrincipalActivity">
 
-    <TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/btn_mostrar_prestamos"
+            android:layout_span="2"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:text="@string/lbl_mostrar_prestamos"/>
+            android:text="@string/lbl_mostrar_prestamos" />
 
     </TableRow>
+
     <TableRow>
 
         <Button
             android:id="@+id/btn_mostrar_cotizador"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:text="@string/cotiza_prestamo"/>
-
-
 
         <Button
             android:id="@+id/btn_opciones"
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:text="Opciones"/>
     </TableRow>
-
 
 </TableLayout>
