@@ -66,16 +66,16 @@ public class MostrarCotizacionActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
-            case R.id.menu_popup_editar:
-                Toast.makeText(MostrarCotizacionActivity.this, "Editar", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.menu_popup_eliminar:
-                Toast.makeText(MostrarCotizacionActivity.this, "Eliminar", Toast.LENGTH_SHORT).show();
+            case R.id.menu_popup_guardar:
+                Toast.makeText(MostrarCotizacionActivity.this, "Guardar", Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
+    public boolean guardar(){
 
+        return true;
+    }
 }

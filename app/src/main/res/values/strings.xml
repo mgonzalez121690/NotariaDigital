@@ -33,4 +33,5 @@
     <string name="lbl_nombre">Nombre</string>
     <string name="lbl_miembro">¿Ya eres miembro? Inicia Sesión</string>
     <string name="lbl_crear_cuenta">Crear cuenta</string>
+
 </resources>
