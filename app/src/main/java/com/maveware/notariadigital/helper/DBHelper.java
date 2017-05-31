@@ -12,23 +12,20 @@ import com.maveware.notariadigital.model.Persona;
  * Created by mgonzalezy on 13/04/2017.
  */
 
-public abstract class DBHelper extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "Notaria.db";
-
-    private static final String TYPE_TEXT = "TEXT";
-    private static final String COMMA_SEP = ",";
+public class DBHelper extends SQLiteOpenHelper {
+    private static final int DATABASE_SCHEMA_VERSION = 1;
+    private static final String DATABASE_NAME = "prestadores.sqlite";
 
     public String CREATE_QUERY;
     public String DROP_QUERY;
 
 
     public DBHelper(Context context){
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, DATABASE_NAME, null, DATABASE_SCHEMA_VERSION);
     }
 
     public DBHelper(Context context, String create_query){
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, DATABASE_NAME, null, DATABASE_SCHEMA_VERSION);
         CREATE_QUERY = create_query;
     }
 
