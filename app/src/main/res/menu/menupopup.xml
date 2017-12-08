@@ -6,4 +6,10 @@
        android:icon="@drawable/save">
     </item>
 
+    <item android:id="@+id/menu_general"
+        android:title=""
+        android:icon="@drawable/basic_manu">
+
+    </item>
+
 </menu>

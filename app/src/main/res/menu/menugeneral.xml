@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+        android:id="@+id/menu_s_1"
+        android:title="Sección 1"/>
+        <item
+            android:id="@+id/menu_s_2"
+            android:title="Sección 2"/>
+        <item
+            android:id="@+id/menu_s_3"
+            android:title="Sección 3"/>
+    </group>
+
+    <item android:id="@+id/navigation_subheader"
+        android:title="Otras opciones">
+        <menu>
+               <item android:id="@+id/menu_opcion_1"
+                   android:title="Cerrar Sesión"/>
+        </menu>
+
+    </item>
+
+</menu>

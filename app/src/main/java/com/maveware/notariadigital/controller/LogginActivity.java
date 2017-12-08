@@ -43,6 +43,12 @@ public class LogginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_loggin_layout);
         ButterKnife.inject(this);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        if(firebaseAuth.getCurrentUser() != null){
+            Intent intent = new Intent(LogginActivity.this, GpsExample.class);
+            startActivity(intent);
+        }
+
         btn_loggin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -115,7 +121,7 @@ public class LogginActivity extends AppCompatActivity {
 
     public void onLoginSuccess(){
         btn_loggin.setEnabled(true);
-        Intent intent = new Intent(LogginActivity.this, MenuPrincipalActivity.class);
+        Intent intent = new Intent(LogginActivity.this, GpsExample.class);
         startActivity(intent);
         finish();
     }
