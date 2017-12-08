@@ -12,7 +12,22 @@
         android:text="@string/captura_datos"
         android:gravity="center_horizontal" />
 
-    <TextView
+    <!-- Monto Label-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+        <EditText
+            android:id="@+id/txt_monto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/monto_prestamo"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/monto_prestamo"/>
@@ -20,7 +35,7 @@
     <EditText
         android:id="@+id/txtMonto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"/> -->
 
     <TableLayout
         android:layout_width="match_parent"
@@ -28,22 +43,38 @@
         android:stretchColumns="2">
 
         <TableRow>
-            <TextView
-                android:layout_column="1"
-                android:text="@string/plazo_prestamo"
-                android:textAlignment="center"
-                />
+
             <TextView
                 android:layout_column="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/periodicidad_pago"
                 android:textAlignment="center"
                 />
         </TableRow>
 
         <TableRow>
-            <EditText
-                android:layout_column="1"
-                android:id="@+id/txtPlazo"/>
+
+                <!--<EditText
+                    android:id="@+id/txt_plazo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/plazo_prestamo"/>-->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/txt_plazo"
+                    android:layout_width="164dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plazo_prestamo"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
 
             <Spinner
                 android:layout_column="2"
@@ -54,8 +85,21 @@
 
 
     </TableLayout>
+    <!-- Monto Label-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+        <EditText
+            android:id="@+id/txt_tasa_interes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType=""
+            android:hint="@string/tasa_interes"/>
 
-    <TextView
+    </android.support.design.widget.TextInputLayout>
+    <!--<TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tasa_interes"
@@ -64,7 +108,7 @@
         android:id="@+id/txt_tasa_interes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        />-->
     <Button
         android:id="@+id/btn_realizar_cotizacion"
         android:layout_width="match_parent"

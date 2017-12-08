@@ -21,6 +21,20 @@ public class UtileriasHelper {
         return nf.format(valor);
     }
 
+    public static boolean validarNumero(Object valor){
+        if(valor == null) {
+            return false;
+        }else{
+            String cadena = String.valueOf(valor);
+            if(!cadena.matches("[0-9]*") || cadena.isEmpty())
+                return false;
+            Double valorDouble = Double.parseDouble(cadena);
+            if(valorDouble <= 0)
+                return false;
+
+        }
+        return true;
+    }
 
 
 }
